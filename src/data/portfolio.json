@@ -1,0 +1,51 @@
+[
+  {
+    "title": "3DCRIATIVA",
+    "stack": ["React.js", "styled-components"],
+    "imgSrc": "../images/portfolio-3d-criativa.JPG",
+    "githubLink": "https://github.com/tsaristbomba/3dcriativa-v2",
+    "link": "https://3dcriativa.netlify.app/"
+  },
+  {
+    "title": "BookFinder",
+    "stack": ["React.js", "API", "CSS3"],
+    "imgSrc": "../images/portfolio-book-finder.JPG",
+    "githubLink": "https://github.com/tsaristbomba/bookfinder",
+    "link": "https://adoring-stonebraker-741672.netlify.app/"
+  },
+  {
+    "title": "Gif City",
+    "stack": ["React.js", "API", "Bootstrap"],
+    "imgSrc": "../images/portfolio-gif-city.JPG",
+    "githubLink": "https://github.com/tsaristbomba/gif-city",
+    "link": "https://tsaristbomba.github.io/gif-city/"
+  },
+  {
+    "title": "Weather App",
+    "stack": ["React.js", "API", "Material-UI"],
+    "imgSrc": "../images/portfolio-weather.jpg",
+    "githubLink": "https://github.com/tsaristbomba/weather-app",
+    "link": "https://weather-app-11969.web.app/"
+  },
+  {
+    "title": "Memory game",
+    "stack": ["React.js", "API", "CSS3"],
+    "imgSrc": "../images/portfolio-memory-game.JPG",
+    "githubLink": "https://github.com/tsaristbomba/memory-game",
+    "link": "https://anime-memory-game.netlify.app/"
+  },
+  {
+    "title": "Growee",
+    "stack": ["React.js", "styled-components"],
+    "imgSrc": "../images/portfolio-growee.JPG",
+    "githubLink": "https://github.com/tsaristbomba/landing-black-white",
+    "link": "https://landing-black-white.web.app/"
+  },
+  {
+    "title": "Datamkt",
+    "stack": ["React.js", "styled-components"],
+    "imgSrc": "../images/portfolio-datamkt.JPG",
+    "githubLink": "https://github.com/tsaristbomba/datamkt-landing",
+    "link": "https://frosty-heisenberg-374df8.netlify.app/"
+  }
+]
