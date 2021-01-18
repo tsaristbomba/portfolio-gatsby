@@ -107,7 +107,7 @@ module.exports = {
         short_name: `telfer`,
         start_url: `/`,
         display: `standalone`,
-        icon: `src/images/icon2.jpg`, // This path is relative to the root of the site.
+        icon: `src/images/icon.jpg`, // This path is relative to the root of the site.
       },
     },
   ],
