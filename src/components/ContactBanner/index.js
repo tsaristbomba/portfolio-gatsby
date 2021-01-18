@@ -17,7 +17,7 @@ const ContactBanner = () => {
     <BannerContainer>
       <BannerWrapper>
         <Column1>
-          <BannerTitle>Need a JavaScript developer?</BannerTitle>
+          <BannerTitle>Need a React.js developer?</BannerTitle>
           {/* <BannerSub to="/contact">Get In Touch</BannerSub> */}
         </Column1>
         <Column2>

@@ -39,14 +39,18 @@ const Box = ({ imgSrc, title, stack, githubLink, link, description }) => {
             ) : (
               ""
             )}
-            <BoxIcon
-              href={link}
-              target="_blank"
-              aria-label="App Link"
-              rel="noopener noreferrer"
-            >
-              <FaLink />
-            </BoxIcon>
+            {link ? (
+              <BoxIcon
+                href={link}
+                target="_blank"
+                aria-label="App Link"
+                rel="noopener noreferrer"
+              >
+                <FaLink />
+              </BoxIcon>
+            ) : (
+              ""
+            )}
           </BoxIcons>
         </BoxText>
 
