@@ -20,8 +20,6 @@ import {
 } from "./Post.styles"
 
 const Post = ({ blog }) => {
-  console.log(blog)
-
   function formatDate(rawDate) {
     const dateObj = new Date(rawDate)
     const month =
