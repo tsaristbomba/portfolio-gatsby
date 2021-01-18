@@ -6,12 +6,18 @@ import {
   ErrorH1,
   ErrorP,
   Button,
+  NavLogo,
+  LogoSpan,
 } from "./Error.styles"
 
 const Error = () => {
   return (
     <ErrorContainer>
       <ErrorWrapper>
+        <NavLogo to="/">
+          <span>T</span>
+          <LogoSpan>F</LogoSpan>
+        </NavLogo>
         <ErrorH1>
           <Typewriter
             options={{
@@ -27,7 +33,7 @@ const Error = () => {
         <ErrorP>
           The page you're trying to visit <strong>does not exist</strong>
         </ErrorP>
-        <Button to="/">Back to Home</Button>
+        <Button to="/">Get me out!</Button>
       </ErrorWrapper>
     </ErrorContainer>
   )

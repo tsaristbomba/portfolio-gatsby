@@ -5,34 +5,40 @@ import {
   PortfolioBox,
   BoxText,
   BoxH2,
-  BoxStack,
   BoxP,
+  BoxStack,
+  BoxPill,
   BoxIcons,
   BoxIcon,
   BoxImage,
   Image,
 } from "./Box.styles"
 
-const Box = ({ imgSrc, title, stack, githubLink, link }) => {
+const Box = ({ imgSrc, title, stack, githubLink, link, description }) => {
   return (
     <>
       <PortfolioBox data-aos="fade-up">
         <BoxText>
           <BoxH2>{title}</BoxH2>
+          <BoxP>{description}</BoxP>
           <BoxStack>
             {stack.map((data, key) => {
-              return <BoxP key={key}>{data}</BoxP>
+              return <BoxPill key={key}>{data}</BoxPill>
             })}
           </BoxStack>
           <BoxIcons>
-            <BoxIcon
-              href={githubLink}
-              target="_blank"
-              aria-label="Github"
-              rel="noopener noreferrer"
-            >
-              <FaGithub />
-            </BoxIcon>
+            {githubLink ? (
+              <BoxIcon
+                href={githubLink}
+                target="_blank"
+                aria-label="Github"
+                rel="noopener noreferrer"
+              >
+                <FaGithub />
+              </BoxIcon>
+            ) : (
+              ""
+            )}
             <BoxIcon
               href={link}
               target="_blank"
@@ -58,6 +64,7 @@ Box.propTypes = {
   stack: PropTypes.array,
   githubLink: PropTypes.string,
   link: PropTypes.string,
+  description: PropTypes.string,
 }
 
 export default Box

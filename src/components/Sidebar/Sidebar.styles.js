@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import { FaTimes } from "react-icons/fa"
 import { AnchorLink as Link } from "gatsby-plugin-anchor-links"
-import { primary, secondary, tertiary } from "../../data/colors"
+import { primary, quaternary, secondary, tertiary } from "../../data/colors"
 
 export const SidebarContainer = styled.div`
   position: fixed;
@@ -27,7 +27,8 @@ export const IconWrapper = styled.div`
   outline: none;
 `
 export const CloseIcon = styled(FaTimes)`
-  color: ${secondary};
+  color: ${quaternary};
+  filter: drop-shadow(0px 2px 6px rgba(255, 24, 76, 0.8));
 `
 export const SidebarMenu = styled.div`
   display: grid;
@@ -36,7 +37,7 @@ export const SidebarMenu = styled.div`
   text-align: center;
 
   @media screen and (max-width: 480px) {
-    grid-template-rows: repeat(4, 60px);
+    grid-template-rows: repeat(4, 80px);
   }
 `
 export const SidebarHashLink = styled(Link)`
@@ -49,6 +50,8 @@ export const SidebarHashLink = styled(Link)`
   color: ${secondary};
   letter-spacing: 1.1px;
   transition: 0.2s ease-in-out;
+  text-shadow: none;
+  border-bottom: none;
 
   &:hover {
     color: ${tertiary};

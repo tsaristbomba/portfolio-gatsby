@@ -1,7 +1,36 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.com/docs/node-apis/
- */
+const path = require("path")
+const slash = require("slash")
 
-// You can delete this file if you're not using it
+exports.createPages = ({ graphql, actions }) => {
+  const { createPage } = actions
+
+  return graphql(`
+    {
+      allContentfulBlogPost {
+        edges {
+          node {
+            slug
+          }
+        }
+      }
+    }
+  `)
+    .then(result => {
+      if (result.errors) {
+        console.log("Contentful data error", result.errors)
+      }
+
+      const blogTemplate = path.resolve("./src/templates/blogPost.js")
+
+      result.data.allContentfulBlogPost.edges.forEach(post => {
+        createPage({
+          path: `/blog/${post.node.slug}`,
+          component: slash(blogTemplate),
+          context: {
+            slug: post.node.slug,
+          },
+        })
+      })
+    })
+    .catch(error => console.log("Contentful data error", error))
+}

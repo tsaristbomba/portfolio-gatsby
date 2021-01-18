@@ -21,5 +21,6 @@ export const PortfolioTitle = styled.div`
 export const Title = styled.h3`
   text-align: start;
   font-size: 18px;
-  font-weight: bold;
+  display: flex;
+  align-items: center;
 `

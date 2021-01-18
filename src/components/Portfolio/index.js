@@ -7,6 +7,8 @@ import {
   PortfolioTitle,
   Title,
 } from "./Portfolio.styles"
+import { Dot } from "../../styles/GlobalStyles"
+import ScrollButton from "../ScrollButton"
 
 const Portfolio = () => {
   const data = useStaticQuery(graphql`
@@ -18,6 +20,7 @@ const Portfolio = () => {
             githubLink
             stack
             link
+            description
             imgSrc {
               childImageSharp {
                 fluid {
@@ -33,9 +36,13 @@ const Portfolio = () => {
 
   return (
     <PortfolioContainer>
+      <ScrollButton />
       <PortfolioWrapper id="work">
         <PortfolioTitle>
-          <Title>Selected Work.</Title>
+          <Title>
+            <Dot />
+            Selected Work
+          </Title>
         </PortfolioTitle>
         {data.allPortfolioJson.edges.map((item, key) => {
           return <Box {...item.node} key={key} />

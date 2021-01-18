@@ -9,31 +9,76 @@ import {
   MobileIcon,
   NavMenu,
   NavItem,
-  NavHashLink,
+  NavLink,
 } from "./Navbar.styles"
+import { quaternary, quinary } from "../../data/colors"
 
 const Navbar = ({ handleMenu }) => {
   return (
     <Nav>
       <NavbarContainer>
-        <NavLogo to="/#home">
-          ANDREI<LogoSpan>TELFER.</LogoSpan>
+        <NavLogo to="/">
+          <span>T</span>
+          <LogoSpan>F</LogoSpan>
         </NavLogo>
         <MobileIcon onClick={handleMenu}>
           <FaBars />
         </MobileIcon>
         <NavMenu>
           <NavItem>
-            <NavHashLink to="/#work">Selected Work</NavHashLink>
+            <NavLink
+              to="/work"
+              activeStyle={{
+                color: quaternary,
+                textShadow: `${quinary} 0px 4px 18px, ${quinary} 0px 2px 10px`,
+              }}
+            >
+              Work
+            </NavLink>
           </NavItem>
           <NavItem>
-            <NavHashLink to="/about#about">About</NavHashLink>
+            <NavLink
+              to="/about"
+              activeStyle={{
+                color: quaternary,
+                textShadow: `${quinary} 0px 4px 18px, ${quinary} 0px 2px 10px`,
+              }}
+            >
+              About
+            </NavLink>
+          </NavItem>
+          {/* <NavItem>
+            <NavLink
+              to="/contact"
+              activeStyle={{
+                color: quaternary,
+                textShadow: `${quinary} 0px 4px 18px, ${quinary} 0px 2px 10px`,
+              }}
+            >
+              Contact
+            </NavLink>
+          </NavItem> */}
+          <NavItem>
+            <NavLink
+              to="/blog"
+              activeStyle={{
+                color: quaternary,
+                textShadow: `${quinary} 0px 4px 18px, ${quinary} 0px 2px 10px`,
+              }}
+            >
+              Blog
+            </NavLink>
           </NavItem>
           <NavItem>
-            <NavHashLink to="/contact#contact">Contact</NavHashLink>
-          </NavItem>
-          <NavItem>
-            <NavHashLink to="/playlists#playlists">Playlists</NavHashLink>
+            <NavLink
+              to="/playlists"
+              activeStyle={{
+                color: quaternary,
+                textShadow: `${quinary} 0px 4px 18px, ${quinary} 0px 2px 10px`,
+              }}
+            >
+              Playlists
+            </NavLink>
           </NavItem>
         </NavMenu>
       </NavbarContainer>

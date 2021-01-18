@@ -1,9 +1,10 @@
 import styled from "styled-components"
-import { AnchorLink as Link } from "gatsby-plugin-anchor-links"
-import { primary, secondary, tertiary } from "../../data/colors"
+import { Link } from "gatsby"
+import { primary, quaternary, quinary, secondary } from "../../data/colors"
 
 export const Nav = styled.nav`
   background: ${primary};
+  color: ${secondary};
   height: 80px;
   display: flex;
   justify-content: center;
@@ -31,21 +32,18 @@ export const NavbarContainer = styled.div`
   }
 `
 export const NavLogo = styled(Link)`
-  font-size: 22px;
+  font-size: 35px;
+  padding: 10px;
   cursor: pointer;
   text-decoration: none;
-  color: ${secondary};
   display: flex;
   align-items: center;
-  font-weight: bolder;
+  font-weight: bold;
+  border-bottom: none;
 `
 export const LogoSpan = styled.span`
-  font-size: 22px;
-  color: ${primary};
-  background: ${secondary};
-  padding: 2px 4px;
-  border-radius: 0 8px 8px 0;
-  margin-left: 4px;
+  margin-left: -5px;
+  /* padding-bottom: 3px; */
 `
 export const MobileIcon = styled.div`
   display: none;
@@ -58,7 +56,8 @@ export const MobileIcon = styled.div`
     transform: translate(-100%, 80%);
     font-size: 1.8rem;
     cursor: pointer;
-    color: ${secondary};
+    color: ${quaternary};
+    filter: drop-shadow(0px 2px 6px rgba(255, 24, 76, 0.8));
   }
 `
 export const NavMenu = styled.ul`
@@ -74,7 +73,8 @@ export const NavMenu = styled.ul`
 export const NavItem = styled.li`
   height: 80px;
 `
-export const NavHashLink = styled(Link)`
+
+export const NavLink = styled(Link)`
   color: ${secondary};
   display: flex;
   align-items: center;
@@ -86,12 +86,11 @@ export const NavHashLink = styled(Link)`
   border-bottom: 3px solid transparent;
   letter-spacing: 1.1px;
   transition: 0.2s ease;
-
-  &.active {
-    color: ${tertiary};
-  }
+  text-shadow: none;
+  font-weight: bold;
 
   &:hover {
-    color: ${tertiary};
+    color: ${quaternary};
+    text-shadow: ${quinary} 0px 4px 18px, ${quinary} 0px 2px 10px;
   }
 `

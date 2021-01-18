@@ -1,16 +1,16 @@
 import React from "react"
 
-import Layout from "../components/layout"
 import Hero from "../components/Hero"
-import Portfolio from "../components/Portfolio"
 import SEO from "../components/seo"
+import { profileObj } from "../data/profile"
+import GlobalStyles from "../styles/GlobalStyles"
 
 const IndexPage = () => (
-  <Layout>
+  <>
+    <GlobalStyles />
     <SEO title="Home" />
-    <Hero />
-    <Portfolio />
-  </Layout>
+    <Hero {...profileObj} />
+  </>
 )
 
 export default IndexPage

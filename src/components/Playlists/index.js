@@ -8,6 +8,8 @@ import {
   PlaylistsH1,
   PlaylistsP,
 } from "./Playlists.styles"
+import { Dot } from "../../styles/GlobalStyles"
+import ScrollButton from "../ScrollButton"
 
 const Playlists = () => {
   const data = useStaticQuery(graphql`
@@ -34,9 +36,13 @@ const Playlists = () => {
 
   return (
     <PlaylistsContainer id="playlists">
+      <ScrollButton />
       <PlaylistsWrapper>
         <PlaylistsTextWrapper>
-          <PlaylistsH1>Playlists.</PlaylistsH1>
+          <PlaylistsH1>
+            <Dot />
+            Playlists
+          </PlaylistsH1>
           <PlaylistsP>Music that inspires me.</PlaylistsP>
         </PlaylistsTextWrapper>
         {data.allPlaylistsJson.edges.map((item, key) => {

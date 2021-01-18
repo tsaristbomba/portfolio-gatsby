@@ -1,51 +1,46 @@
 [
   {
+    "title": "BitFlair",
+    "stack": [
+      "React.js",
+      "styled-components",
+      "API",
+      "Node.js",
+      "Express",
+      "Responsive Design"
+    ],
+    "imgSrc": "../images/bitflair.jpg",
+    "link": "https://bitflair-cloud-messaging.web.app/",
+    "description": "Personal project that notifies the price of Bitcoin daily. (Under development)"
+  },
+  {
     "title": "3DCRIATIVA",
-    "stack": ["React.js", "styled-components"],
+    "stack": ["React.js", "styled-components", "Responsive Design"],
     "imgSrc": "../images/portfolio-3d-criativa.JPG",
     "githubLink": "https://github.com/tsaristbomba/3dcriativa-v2",
-    "link": "https://3dcriativa.netlify.app/"
+    "link": "https://3dcriativa.netlify.app/",
+    "description": "Marketing website for 3DCriativa, a São Paulo based company. Built with React.js."
   },
   {
-    "title": "BookFinder",
-    "stack": ["React.js", "API", "CSS3"],
-    "imgSrc": "../images/portfolio-book-finder.JPG",
-    "githubLink": "https://github.com/tsaristbomba/bookfinder",
-    "link": "https://adoring-stonebraker-741672.netlify.app/"
-  },
-  {
-    "title": "Gif City",
-    "stack": ["React.js", "API", "Bootstrap"],
-    "imgSrc": "../images/portfolio-gif-city.JPG",
-    "githubLink": "https://github.com/tsaristbomba/gif-city",
-    "link": "https://tsaristbomba.github.io/gif-city/"
+    "title": "telfer.io",
+    "stack": [
+      "Gatsby.js",
+      "styled-components",
+      "GraphQL",
+      "Contentful",
+      "Responsive Design"
+    ],
+    "imgSrc": "../images/telfer-home.jpg",
+    "githubLink": "https://github.com/tsaristbomba/portfolio-gatsby",
+    "link": "https://telfer.io",
+    "description": "Portfolio and Blog for myself and by myself."
   },
   {
     "title": "Weather App",
-    "stack": ["React.js", "API", "Material-UI"],
+    "stack": ["React.js", "API", "Responsive Design"],
     "imgSrc": "../images/portfolio-weather.jpg",
     "githubLink": "https://github.com/tsaristbomba/weather-app",
-    "link": "https://weather-app-11969.web.app/"
-  },
-  {
-    "title": "Memory game",
-    "stack": ["React.js", "API", "CSS3"],
-    "imgSrc": "../images/portfolio-memory-game.JPG",
-    "githubLink": "https://github.com/tsaristbomba/memory-game",
-    "link": "https://anime-memory-game.netlify.app/"
-  },
-  {
-    "title": "Growee",
-    "stack": ["React.js", "styled-components"],
-    "imgSrc": "../images/portfolio-growee.JPG",
-    "githubLink": "https://github.com/tsaristbomba/landing-black-white",
-    "link": "https://landing-black-white.web.app/"
-  },
-  {
-    "title": "Datamkt",
-    "stack": ["React.js", "styled-components"],
-    "imgSrc": "../images/portfolio-datamkt.JPG",
-    "githubLink": "https://github.com/tsaristbomba/datamkt-landing",
-    "link": "https://frosty-heisenberg-374df8.netlify.app/"
+    "link": "https://weather-app-11969.web.app/",
+    "description": "Weather app that outputs local or other places weather conditions. Built with React.js"
   }
 ]

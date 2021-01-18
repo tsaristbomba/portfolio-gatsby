@@ -17,7 +17,7 @@ export const profileObj = {
     "CSS3",
     "Responsive Design",
   ],
-  skill: ["Node.js", "Material-UI", "Bootstrap"],
+  skill: ["Node.js", "Material-UI", "Bootstrap", "GraphQL"],
   contact:
     "I don't realy tweet but if you like, you can DM me. Or you can just email me:",
   socials: [

@@ -1,23 +1,32 @@
-import React from "react";
+import React from "react"
 import {
   FooterContainer,
   FooterWrapper,
   FooterRights,
   FooterMaker,
   CodeIcon,
-} from "./Footer.styles";
+  FooterAnchor,
+} from "./Footer.styles"
 
 const Footer = () => {
   return (
     <FooterContainer>
       <FooterWrapper>
-        <FooterRights>ⓒ {new Date().getFullYear()} Andrei Telfer</FooterRights>
+        <FooterRights>ⓒ {new Date().getFullYear()} Andrei T.F.</FooterRights>
         <FooterMaker>
-          <CodeIcon /> with React.js
+          <CodeIcon /> with{" "}
+          <FooterAnchor
+            href="https://www.gatsbyjs.com/"
+            target="_blank"
+            aria-label="Gatsby"
+            rel="noopener noreferrer"
+          >
+            Gatsby.js
+          </FooterAnchor>
         </FooterMaker>
       </FooterWrapper>
     </FooterContainer>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

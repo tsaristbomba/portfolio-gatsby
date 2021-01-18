@@ -13,11 +13,11 @@ import {
   SocialsLink,
   TwitterIcon,
   EmailIcon,
-  SocialsText,
   ImageWrapper,
   ContactImage,
   ContactRow,
 } from "./Contact.styles"
+import { Dot } from "../../styles/GlobalStyles"
 
 const Contact = ({ text }) => {
   const data = useStaticQuery(graphql`
@@ -43,7 +43,10 @@ const Contact = ({ text }) => {
       <ContactWrapper>
         <ContactContent>
           <Title>
-            <ContactH2>Contact.</ContactH2>
+            <ContactH2>
+              <Dot />
+              Contact
+            </ContactH2>
           </Title>
           <ContactRow>
             <ImageWrapper data-aos="fade-right">
@@ -63,17 +66,13 @@ const Contact = ({ text }) => {
                   aria-label="Twitter"
                   rel="noopener noreferrer"
                 >
-                  <SocialsText>
-                    DM me <TwitterIcon />
-                  </SocialsText>
+                  <TwitterIcon />
                 </SocialsLink>
                 <SocialsLink
                   href="mailto:andreitelfer@gmail.com"
                   aria-label="Email"
                 >
-                  <SocialsText>
-                    Email me <EmailIcon />
-                  </SocialsText>
+                  <EmailIcon />
                 </SocialsLink>
               </ContactSocials>
             </ContactText>

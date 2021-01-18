@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { secondary, tertiary } from "../../../data/colors"
+import { quaternary, secondary, tertiary } from "../../../data/colors"
 import Img from "gatsby-image"
 
 export const PlaylistsInfoContainer = styled.div`
@@ -58,13 +58,11 @@ export const PlaylistP = styled.p`
   margin-bottom: 8px;
 `
 export const PlaylistButton = styled.a`
-  color: ${secondary};
+  color: ${quaternary};
   font-size: 2rem;
   text-decoration: none;
   cursor: pointer;
   transition: all 0.2s ease;
-
-  &:hover {
-    color: ${tertiary};
-  }
+  filter: drop-shadow(0px 2px 6px rgba(255, 24, 76, 0.6));
+  border-bottom: none;
 `

@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { primary, secondary, tertiary } from "../../data/colors"
+import { primary, quaternary, secondary } from "../../data/colors"
 import { MdEmail } from "react-icons/md"
 import { FaTwitter } from "react-icons/fa"
 import Img from "gatsby-image"
@@ -37,9 +37,12 @@ export const ContactContent = styled.div`
 `
 export const Title = styled.div`
   margin-bottom: 1rem;
+  color: ${secondary};
 `
 export const ContactH2 = styled.h2`
   font-size: 18px;
+  display: flex;
+  align-items: center;
 `
 export const ContactRow = styled.div`
   display: grid;
@@ -88,37 +91,22 @@ export const ContactSocials = styled.div`
   }
 
   @media screen and (max-width: 480px) {
-    flex-direction: column;
+    /* flex-direction: column; */
     align-items: center;
   }
 `
 export const TwitterIcon = styled(FaTwitter)`
-  font-size: 1.4rem;
-  margin-left: 4px;
+  filter: drop-shadow(0px 2px 6px rgba(255, 24, 76, 0.5));
 `
 export const EmailIcon = styled(MdEmail)`
-  font-size: 1.4rem;
-  margin-left: 4px;
+  filter: drop-shadow(0px 2px 6px rgba(255, 24, 76, 0.5));
 `
 export const SocialsLink = styled.a`
-  color: ${primary};
-  margin-right: 1rem;
-  padding: 12px;
-  width: 12rem;
-  border-radius: 8px;
-  display: flex;
-  justify-content: center;
-  text-decoration: none;
-  background: ${secondary};
-  transition: all 0.2s ease;
-  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px,
-    rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px,
-    rgba(0, 0, 0, 0.07) 0px 16px 16px;
-
-  &:hover {
-    background: ${tertiary};
-    color: ${secondary};
-  }
+  color: ${quaternary};
+  margin: 0 1rem;
+  font-size: 2rem;
+  transition: 0.2s color ease;
+  border-bottom: none;
 
   @media screen and (max-width: 768px) {
     margin-top: 1rem;

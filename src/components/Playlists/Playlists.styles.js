@@ -1,12 +1,12 @@
-import styled from "styled-components";
-import { primary, secondary, tertiary } from "../../data/colors";
+import styled from "styled-components"
+import { primary, secondary, tertiary } from "../../data/colors"
 
 export const PlaylistsContainer = styled.div`
   background: ${primary};
   display: flex;
   justify-content: center;
   min-height: calc(100vh - 160px);
-`;
+`
 export const PlaylistsWrapper = styled.div`
   width: 100%;
   max-width: 1100px;
@@ -19,15 +19,16 @@ export const PlaylistsWrapper = styled.div`
   @media screen and (max-width: 768px) {
     align-items: center;
   }
-`;
+`
 export const PlaylistsTextWrapper = styled.div`
   width: 100%;
-`;
+`
 export const PlaylistsH1 = styled.h1`
   color: ${secondary};
   font-size: 18px;
-  font-weight: bolder;
-`;
+  display: flex;
+  align-items: center;
+`
 export const PlaylistsP = styled.p`
   color: ${tertiary};
-`;
+`

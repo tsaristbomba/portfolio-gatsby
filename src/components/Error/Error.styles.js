@@ -1,9 +1,9 @@
 import styled from "styled-components"
 import { Link } from "gatsby"
-import { primary, secondary, tertiary } from "../../data/colors"
+import { primary, quaternary, secondary } from "../../data/colors"
 
 export const ErrorContainer = styled.div`
-  height: calc(100vh - 160px);
+  height: 100vh;
   background: ${primary};
 `
 export const ErrorWrapper = styled.div`
@@ -13,6 +13,7 @@ export const ErrorWrapper = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin: 0 auto;
 `
 export const ErrorH1 = styled.h1`
   color: ${primary};
@@ -34,24 +35,29 @@ export const ErrorP = styled.p`
   margin: 1rem 0;
 `
 export const Button = styled(Link)`
-  color: ${secondary};
-  padding: 12px;
-  width: 10rem;
+  /* color: ${secondary}; */
+  padding-bottom: 0.5px;
+  font-size: 25px;
   display: flex;
   justify-content: center;
   text-decoration: none;
   background: transparent;
-  transition: all 0.2s ease;
-  border-radius: 8px;
-  border: 1px solid ${secondary};
+  border-bottom: 3px solid ${quaternary};
   text-transform: uppercase;
   font-weight: bold;
   margin: 0.5rem 0;
-
-  &:hover {
-    /* background: ${secondary}; */
-    /* color: ${primary}; */
-    color: ${tertiary};
-    border: 1px solid ${tertiary};
-  }
+`
+export const NavLogo = styled(Link)`
+  font-size: 3rem;
+  padding: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  border-bottom: none;
+  margin-bottom: 1rem;
+`
+export const LogoSpan = styled.span`
+  margin-left: -5px;
 `

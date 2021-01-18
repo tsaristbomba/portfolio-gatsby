@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { primary, secondary, tertiary } from "../../data/colors"
+import { primary, quaternary, secondary, tertiary } from "../../data/colors"
 import { AnchorLink as Link } from "gatsby-plugin-anchor-links"
 import Img from "gatsby-image"
 
@@ -28,10 +28,12 @@ export const ProfileWrapper = styled.div`
 `
 export const ProfileTitle = styled.div`
   width: 100%;
+  color: ${secondary};
 `
 export const Title = styled.h3`
-  color: ${secondary};
   font-size: 18px;
+  display: flex;
+  align-items: center;
 `
 export const ProfileContent = styled.div`
   flex-direction: row;
@@ -78,31 +80,22 @@ export const ProfileP = styled.p`
   margin-bottom: 1rem;
 `
 export const ProfileAnchor = styled.a`
-  color: ${secondary};
   text-decoration: none;
-  border-bottom: 2px solid ${secondary};
+  border-bottom: 2px solid ${quaternary};
   transition: all 0.2s ease;
-
-  &:hover {
-    color: ${tertiary};
-    border-color: ${tertiary};
-  }
 `
 export const ProfileLink = styled(Link)`
-  color: ${secondary};
   text-decoration: none;
-  border-bottom: 2px solid ${secondary};
+  border-bottom: 2px solid ${quaternary};
   transition: all 0.2s ease;
-
-  &:hover {
-    color: ${tertiary};
-    border-color: ${tertiary};
   }
 `
 export const ProfileSkills = styled.div`
   margin-top: 2rem;
 `
-export const SkillsTitle = styled.div``
+export const SkillsTitle = styled.div`
+  color: ${secondary};
+`
 export const Skills = styled.div`
   display: flex;
   flex-direction: row;
@@ -111,11 +104,12 @@ export const Skills = styled.div`
 export const ProfileSkillX = styled.div`
   margin-right: 4px;
   margin-top: 8px;
-  background: ${secondary};
-  color: ${primary};
+  background: ${quaternary};
+  color: ${secondary};
   margin-right: 8px;
-  padding: 6px;
+  padding: 4px 6px;
   border-radius: 8px;
+  box-shadow: rgba(255, 24, 76, 0.4) 0px 3px 18px;
 `
 export const ProfileSkill = styled.div`
   margin-top: 8px;
@@ -123,7 +117,7 @@ export const ProfileSkill = styled.div`
   background: ${tertiary};
   color: ${primary};
   margin-right: 8px;
-  padding: 6px;
+  padding: 4px 6px;
   border-radius: 8px;
 `
 export const Socials = styled.div`
@@ -132,18 +126,16 @@ export const Socials = styled.div`
 export const SocialIcons = styled.div`
   display: flex;
   width: 100%;
+  filter: drop-shadow(0px 2px 6px rgba(255, 24, 76, 0.5));
 
   @media screen and (max-width: 480px) {
     justify-content: center;
   }
 `
 export const SocialLink = styled.a`
-  color: ${secondary};
+  color: ${quaternary};
   font-size: 2rem;
   margin-right: 1rem;
   transition: all 0.2s ease;
-
-  &:hover {
-    color: ${tertiary};
-  }
+  border-bottom: none;
 `

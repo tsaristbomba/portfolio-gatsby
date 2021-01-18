@@ -22,12 +22,13 @@ import {
   SocialIcons,
   SocialLink,
 } from "./Profile.styles"
+import { Dot } from "../../styles/GlobalStyles"
 
 const Profile = ({ alt, skillX, skill, socials, contact }) => {
   const data = useStaticQuery(graphql`
     query {
       allFile(
-        filter: { name: { regex: "/(photo)/" }, ext: { regex: "/(jpg)/" } }
+        filter: { name: { regex: "/(profile)/" }, ext: { regex: "/(jpg)/" } }
       ) {
         edges {
           node {
@@ -46,7 +47,10 @@ const Profile = ({ alt, skillX, skill, socials, contact }) => {
     <ProfileContainer id="about">
       <ProfileWrapper>
         <ProfileTitle>
-          <Title>About.</Title>
+          <Title>
+            <Dot />
+            About
+          </Title>
         </ProfileTitle>
         <ProfileContent>
           <ProfilePicture data-aos="fade-right">
@@ -124,6 +128,7 @@ const Profile = ({ alt, skillX, skill, socials, contact }) => {
                         href={data.href}
                         aria-label={data.name}
                         rel="noopener noreferrer"
+                        target="_blank"
                       >
                         {data.icon}
                       </SocialLink>
