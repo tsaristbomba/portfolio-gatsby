@@ -18,7 +18,6 @@
     "stack": ["React.js", "styled-components", "Responsive Design"],
     "imgSrc": "../images/portfolio-3d-criativa.JPG",
     "githubLink": "https://github.com/tsaristbomba/3dcriativa-v2",
-    // "link": "https://3dcriativa.netlify.app/",
     "description": "Marketing website for 3DCriativa, a São Paulo based company. Built with React.js."
   },
   {
