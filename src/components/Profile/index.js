@@ -46,8 +46,6 @@ const Profile = ({ alt, skillX, skill, socials, contact }) => {
     }
   `)
 
-  console.log(data)
-
   return (
     <ProfileContainer id="about">
       <ProfileWrapper>
