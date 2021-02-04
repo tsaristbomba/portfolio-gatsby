@@ -41,10 +41,7 @@ const Hero = ({ socials }) => {
   const data = useStaticQuery(graphql`
     query {
       allFile(
-        filter: {
-          name: { regex: "/(profile-picture)/" }
-          ext: { regex: "/(jpg)/" }
-        }
+        filter: { name: { regex: "/(home-pic)/" }, ext: { regex: "/(jpg)/" } }
       ) {
         edges {
           node {

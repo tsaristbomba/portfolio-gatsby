@@ -18,7 +18,7 @@
     "stack": ["React.js", "styled-components", "Responsive Design"],
     "imgSrc": "../images/portfolio-3d-criativa.JPG",
     "githubLink": "https://github.com/tsaristbomba/3dcriativa-v2",
-    "description": "Marketing website for 3DCriativa, a São Paulo based company. Built with React.js."
+    "description": "Website for 3DCriativa, a São Paulo based company. Built with React.js."
   },
   {
     "title": "telfer.io",

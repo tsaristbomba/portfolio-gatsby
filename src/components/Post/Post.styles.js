@@ -19,6 +19,7 @@ export const PostHero = styled(Img)`
   margin: 0 auto;
   object-fit: cover;
   opacity: 0.8;
+  border-radius: 4px;
   filter: grayscale(100%);
 
   @media screen and (max-width: 768px) {

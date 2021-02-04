@@ -28,7 +28,10 @@ const Profile = ({ alt, skillX, skill, socials, contact }) => {
   const data = useStaticQuery(graphql`
     query {
       allFile(
-        filter: { name: { regex: "/(profile)/" }, ext: { regex: "/(jpg)/" } }
+        filter: {
+          name: { regex: "/(profile-picture)/" }
+          ext: { regex: "/(jpg)/" }
+        }
       ) {
         edges {
           node {
@@ -42,6 +45,8 @@ const Profile = ({ alt, skillX, skill, socials, contact }) => {
       }
     }
   `)
+
+  console.log(data)
 
   return (
     <ProfileContainer id="about">
