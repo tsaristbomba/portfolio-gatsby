@@ -24,7 +24,7 @@ const Portfolio = () => {
             imgSrc {
               childImageSharp {
                 fluid {
-                  ...GatsbyImageSharpFluid
+                  ...GatsbyImageSharpFluid_withWebp_tracedSVG
                 }
               }
             }

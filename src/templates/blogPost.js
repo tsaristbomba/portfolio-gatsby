@@ -41,7 +41,7 @@ export const pageQuery = graphql`
       }
       heroImage {
         fluid {
-          ...GatsbyContentfulFluid
+          ...GatsbyContentfulFluid_withWebp
         }
       }
     }

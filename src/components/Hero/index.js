@@ -46,7 +46,7 @@ const Hero = ({ socials }) => {
           node {
             childImageSharp {
               fluid {
-                ...GatsbyImageSharpFluid
+                ...GatsbyImageSharpFluid_withWebp
               }
             }
           }
@@ -80,6 +80,7 @@ const Hero = ({ socials }) => {
             <Image
               fluid={data.image.edges[0].node.childImageSharp.fluid}
               loading="eager"
+              fadeIn={false}
               alt="Profile pic"
             />
           </ImageContainer>

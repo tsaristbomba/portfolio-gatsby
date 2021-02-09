@@ -45,6 +45,7 @@ const Post = ({ blog }) => {
           loading="eager"
           fluid={blog.heroImage.fluid}
           alt={blog.title}
+          fadeIn={false}
         />
         <PostWrapper>
           <PostBack to="/blog">
