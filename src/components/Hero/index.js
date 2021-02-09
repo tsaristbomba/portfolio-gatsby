@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react"
 import PropTypes from "prop-types"
+import { getImage } from "gatsby-plugin-image"
 import AOS from "aos"
 import "aos/dist/aos.css"
+// import { getImage } from "gatsby-plugin-image"
 import { FaBars } from "react-icons/fa"
 import { graphql, useStaticQuery } from "gatsby"
 import {
@@ -38,21 +40,18 @@ const Hero = ({ socials }) => {
   //
 
   const data = useStaticQuery(graphql`
-    query {
+    {
       image: allFile(
         filter: { name: { regex: "/(home-pic)/" }, ext: { regex: "/(jpg)/" } }
       ) {
         edges {
           node {
             childImageSharp {
-              fluid {
-                ...GatsbyImageSharpFluid_noBase64
-              }
+              gatsbyImageData
             }
           }
         }
       }
-
       text: allDataJson {
         edges {
           node {
@@ -63,6 +62,8 @@ const Hero = ({ socials }) => {
       }
     }
   `)
+
+  const image = getImage(data.image.edges[0].node)
 
   return (
     <HeroContainer id="home">
@@ -77,12 +78,7 @@ const Hero = ({ socials }) => {
       <HeroWrapper>
         <HeroContent data-aos="fade-up">
           <ImageContainer>
-            <Image
-              fluid={data.image.edges[0].node.childImageSharp.fluid}
-              loading="eager"
-              fadeIn={false}
-              alt="Profile pic"
-            />
+            <Image loading="eager" image={image} alt="Profile pic" />
           </ImageContainer>
           <HeroH1>{data.text.edges[0].node.name}</HeroH1>
           <HeroP>{data.text.edges[0].node.description}</HeroP>

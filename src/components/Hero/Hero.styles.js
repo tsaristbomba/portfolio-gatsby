@@ -7,7 +7,7 @@ import {
   tertiary,
 } from "../../data/colors"
 import { Link } from "gatsby"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image";
 
 export const HeroContainer = styled.div`
   height: 100vh;
@@ -46,7 +46,7 @@ export const ImageContainer = styled.div`
   border: 4px solid ${quaternary};
   box-shadow: 0px 4px 8px rgba(255, 24, 76, 0.6);
 `
-export const Image = styled(Img)`
+export const Image = styled(GatsbyImage)`
   margin: 0 auto;
   width: 200px;
   height: 200px;

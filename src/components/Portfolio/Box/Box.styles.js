@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import { quaternary, secondary, tertiary } from "../../../data/colors"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image";
 
 export const PortfolioBox = styled.div`
   /* display: flex; */
@@ -100,7 +100,7 @@ export const BoxImage = styled.div`
     justify-content: flex-end;
   }
 `
-export const Image = styled(Img)`
+export const Image = styled(GatsbyImage)`
   width: 100%;
   height: auto;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;

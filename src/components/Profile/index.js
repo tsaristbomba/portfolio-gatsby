@@ -22,10 +22,11 @@ import {
   SocialLink,
 } from "./Profile.styles"
 import { Dot } from "../../styles/GlobalStyles"
+import { getImage } from "gatsby-plugin-image"
 
 const Profile = ({ alt, skillX, skill, socials, contact }) => {
   const data = useStaticQuery(graphql`
-    query {
+    {
       image: allFile(
         filter: {
           name: { regex: "/(profile-picture)/" }
@@ -35,14 +36,11 @@ const Profile = ({ alt, skillX, skill, socials, contact }) => {
         edges {
           node {
             childImageSharp {
-              fluid {
-                ...GatsbyImageSharpFluid_noBase64
-              }
+              gatsbyImageData
             }
           }
         }
       }
-
       markdown: allFile(filter: { name: { regex: "/(profile-text)/" } }) {
         edges {
           node {
@@ -55,6 +53,8 @@ const Profile = ({ alt, skillX, skill, socials, contact }) => {
     }
   `)
 
+  const image = getImage(data.image.edges[0].node)
+
   return (
     <ProfileContainer id="about">
       <ProfileWrapper>
@@ -66,12 +66,7 @@ const Profile = ({ alt, skillX, skill, socials, contact }) => {
         </ProfileTitle>
         <ProfileContent>
           <ProfilePicture data-aos="fade-right">
-            <Picture
-              fluid={data.image.edges[0].node.childImageSharp.fluid}
-              loading="eager"
-              fadeIn={false}
-              alt={alt}
-            />
+            <Picture loading="eager" image={image} alt={alt} />
           </ProfilePicture>
           <ProfileText data-aos="fade-up">
             <MarkdownText

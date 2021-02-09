@@ -1,5 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
+import { getImage } from "gatsby-plugin-image"
 import { graphql, useStaticQuery } from "gatsby"
 import {
   ContactContainer,
@@ -21,22 +22,24 @@ import { Dot } from "../../styles/GlobalStyles"
 
 const Contact = ({ text }) => {
   const data = useStaticQuery(graphql`
-    query {
+    {
       allFile(
         filter: { name: { regex: "/(contact)/" }, ext: { regex: "/(jpg)/" } }
       ) {
         edges {
           node {
             childImageSharp {
-              fluid {
-                ...GatsbyImageSharpFluid
-              }
+              gatsbyImageData
             }
           }
         }
       }
     }
   `)
+
+  const image = getImage(
+    data.allFile.edges[0].node.childImageSharp.gatsbyImageData
+  )
 
   return (
     <ContactContainer id="contact">
@@ -50,10 +53,7 @@ const Contact = ({ text }) => {
           </Title>
           <ContactRow>
             <ImageWrapper data-aos="fade-right">
-              <ContactImage
-                fluid={data.allFile.edges[0].node.childImageSharp.fluid}
-                alt="Contact me"
-              />
+              <ContactImage image={image} alt="Contact me" />
             </ImageWrapper>
             <ContactText data-aos="fade-up">
               {text.map((data, key) => {

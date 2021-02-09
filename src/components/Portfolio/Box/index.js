@@ -1,6 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { FaGithub, FaLink } from "react-icons/fa"
+import { getImage } from "gatsby-plugin-image"
 import {
   PortfolioBox,
   BoxText,
@@ -15,6 +16,8 @@ import {
 } from "./Box.styles"
 
 const Box = ({ imgSrc, title, stack, githubLink, link, description }) => {
+  const image = getImage(imgSrc)
+
   return (
     <>
       <PortfolioBox data-aos="fade-up">
@@ -57,8 +60,8 @@ const Box = ({ imgSrc, title, stack, githubLink, link, description }) => {
         <BoxImage>
           <Image
             // loading="eager"
-            fluid={imgSrc.childImageSharp.fluid}
-            fadeIn={false}
+            image={image}
+            // fadeIn={false}
             alt={title}
           />
         </BoxImage>

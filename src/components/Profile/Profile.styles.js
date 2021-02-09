@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import { primary, quaternary, secondary, tertiary } from "../../data/colors"
 import { AnchorLink as Link } from "gatsby-plugin-anchor-links"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image";
 
 export const ProfileContainer = styled.div`
   background: ${primary};
@@ -63,7 +63,7 @@ export const ProfilePicture = styled.div`
     margin-top: 1rem;
   }
 `
-export const Picture = styled(Img)`
+export const Picture = styled(GatsbyImage)`
   width: 100%;
   border-radius: 8px;
 `

@@ -2,7 +2,7 @@ import styled from "styled-components"
 import { primary, quaternary, secondary } from "../../data/colors"
 import { MdEmail } from "react-icons/md"
 import { FaTwitter } from "react-icons/fa"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image";
 
 export const ContactContainer = styled.div`
   height: calc(100vh - 160px);
@@ -69,7 +69,7 @@ export const ImageWrapper = styled.div`
     min-height: 250px;
   }
 `
-export const ContactImage = styled(Img)`
+export const ContactImage = styled(GatsbyImage)`
   width: 100%;
   border-radius: 8px;
 `

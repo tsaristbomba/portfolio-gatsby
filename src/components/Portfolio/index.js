@@ -12,7 +12,7 @@ import ScrollButton from "../ScrollButton"
 
 const Portfolio = () => {
   const data = useStaticQuery(graphql`
-    query {
+    {
       allPortfolioJson {
         edges {
           node {
@@ -23,9 +23,7 @@ const Portfolio = () => {
             description
             imgSrc {
               childImageSharp {
-                fluid {
-                  ...GatsbyImageSharpFluid_noBase64
-                }
+                gatsbyImageData
               }
             }
           }
