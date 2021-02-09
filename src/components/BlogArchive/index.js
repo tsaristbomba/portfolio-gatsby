@@ -33,7 +33,7 @@ const BlogArchive = () => {
             createdAt
             heroImage {
               fluid {
-                ...GatsbyContentfulFluid_withWebp
+                ...GatsbyContentfulFluid_noBase64
               }
             }
           }
