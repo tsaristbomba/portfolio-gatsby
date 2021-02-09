@@ -19,7 +19,13 @@ module.exports = {
       },
     },
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-preload-fonts`,
+    {
+      resolve: `gatsby-plugin-preload-fonts`,
+      options: {
+        crossOrigin: pathname =>
+          pathname.match(/^\/elevated/) ? `use-credentials` : `anonymous`,
+      },
+    },
     `gatsby-plugin-preact`,
     `gatsby-plugin-image`,
     `gatsby-plugin-styled-components`,
