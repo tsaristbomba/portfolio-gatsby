@@ -75,6 +75,13 @@ export const ProfileText = styled.div`
     width: 100%;
   }
 `
+export const MarkdownText = styled.div`
+  color: ${secondary};
+
+  p {
+    margin-bottom: 1rem;
+  }
+`
 export const ProfileP = styled.p`
   color: ${secondary};
   margin-bottom: 1rem;
