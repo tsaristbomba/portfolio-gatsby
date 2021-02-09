@@ -41,7 +41,11 @@ const Post = ({ blog }) => {
       <SEO title={blog.title} />
       <ScrollButton />
       <PostContainer>
-        <PostHero fluid={blog.heroImage.fluid} alt={blog.title} />
+        <PostHero
+          loading="eager"
+          fluid={blog.heroImage.fluid}
+          alt={blog.title}
+        />
         <PostWrapper>
           <PostBack to="/blog">
             <Arrow />
