@@ -56,7 +56,7 @@ const Box = ({ imgSrc, title, stack, githubLink, link, description }) => {
 
         <BoxImage>
           <Image
-            loading="lazy"
+            loading="eager"
             fluid={imgSrc.childImageSharp.fluid}
             alt={title}
           />
