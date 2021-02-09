@@ -36,7 +36,7 @@ const Profile = ({ alt, skillX, skill, socials, contact }) => {
           node {
             childImageSharp {
               fluid {
-                ...GatsbyImageSharpFluid
+                ...GatsbyImageSharpFluid_withWebp_tracedSVG
               }
             }
           }
