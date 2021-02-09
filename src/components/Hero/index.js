@@ -21,7 +21,6 @@ import {
 } from "./Hero.styles"
 import Sidebar from "../Sidebar"
 import { quaternary } from "../../data/colors"
-// import { Dot } from "../../styles/GlobalStyles"
 
 const Hero = ({ socials }) => {
   const [isOpen, setIsOpen] = useState(false)
@@ -40,7 +39,7 @@ const Hero = ({ socials }) => {
 
   const data = useStaticQuery(graphql`
     query {
-      allFile(
+      image: allFile(
         filter: { name: { regex: "/(home-pic)/" }, ext: { regex: "/(jpg)/" } }
       ) {
         edges {
@@ -50,6 +49,15 @@ const Hero = ({ socials }) => {
                 ...GatsbyImageSharpFluid
               }
             }
+          }
+        }
+      }
+
+      text: allDataJson {
+        edges {
+          node {
+            name
+            description
           }
         }
       }
@@ -70,15 +78,13 @@ const Hero = ({ socials }) => {
         <HeroContent data-aos="fade-up">
           <ImageContainer>
             <Image
-              fluid={data.allFile.edges[0].node.childImageSharp.fluid}
+              fluid={data.image.edges[0].node.childImageSharp.fluid}
+              loading="eager"
               alt="Profile pic"
             />
           </ImageContainer>
-          <HeroH1>
-            {/* <Dot /> */}
-            Andrei T. Ferreira
-          </HeroH1>
-          <HeroP>JavaScript Developer</HeroP>
+          <HeroH1>{data.text.edges[0].node.name}</HeroH1>
+          <HeroP>{data.text.edges[0].node.description}</HeroP>
           <Socials>
             {socials.map((data, key) => {
               return (
