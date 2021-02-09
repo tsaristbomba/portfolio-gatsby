@@ -25,10 +25,10 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <style>
+      {/* <style>
         @import
         url('https://fonts.googleapis.com/css2?family=Inter&family=Nunito&display=swap');
-      </style>
+      </style> */}
       <GlobalStyle />
       <Sidebar handleMenu={handleMenu} isOpen={isOpen} />
       <Navbar handleMenu={handleMenu} />
