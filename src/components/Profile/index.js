@@ -69,6 +69,7 @@ const Profile = ({ alt, skillX, skill, socials, contact }) => {
             <Picture
               fluid={data.image.edges[0].node.childImageSharp.fluid}
               loading="eager"
+              fadeIn={false}
               alt={alt}
             />
           </ProfilePicture>

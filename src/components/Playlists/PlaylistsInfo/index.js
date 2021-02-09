@@ -17,7 +17,7 @@ const PlaylistsInfo = ({ img, title, description, reverse, href }) => {
       //data-aos="fade-up"
     >
       <ImageWrapper data-aos={`fade-${reverse ? "left" : "right"}`}>
-        <Image loading="eager" fluid={img.childImageSharp.fluid} alt={title} />
+        <Image fluid={img.childImageSharp.fluid} alt={title} />
       </ImageWrapper>
       <TextWrapper $reverse={reverse} data-aos="fade-up">
         <PlaylistH2>{title}</PlaylistH2>

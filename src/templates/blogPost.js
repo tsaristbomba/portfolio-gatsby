@@ -40,7 +40,7 @@ export const pageQuery = graphql`
         }
       }
       heroImage {
-        fluid(quality: 100) {
+        fluid {
           ...GatsbyContentfulFluid
         }
       }

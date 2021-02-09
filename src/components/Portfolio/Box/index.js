@@ -55,11 +55,7 @@ const Box = ({ imgSrc, title, stack, githubLink, link, description }) => {
         </BoxText>
 
         <BoxImage>
-          <Image
-            loading="eager"
-            fluid={imgSrc.childImageSharp.fluid}
-            alt={title}
-          />
+          <Image fluid={imgSrc.childImageSharp.fluid} alt={title} />
         </BoxImage>
       </PortfolioBox>
     </>
