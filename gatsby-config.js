@@ -21,6 +21,7 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-preload-fonts`,
     `gatsby-plugin-preact`,
+    `gatsby-plugin-image`,
     `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-plugin-anchor-links`,

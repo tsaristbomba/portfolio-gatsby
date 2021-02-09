@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import { quaternary, secondary, tertiary } from "../../../data/colors"
-import Img from "gatsby-image"
+// import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 export const PlaylistsInfoContainer = styled.div`
   display: grid;
@@ -33,7 +34,7 @@ export const ImageWrapper = styled.div`
     min-height: 200px;
   }
 `
-export const Image = styled(Img)`
+export const Image = styled(GatsbyImage)`
   width: 100%;
   border-radius: 8px;
 

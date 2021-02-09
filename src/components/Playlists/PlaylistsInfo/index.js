@@ -1,4 +1,5 @@
 import React from "react"
+import { getImage } from "gatsby-plugin-image"
 import { FaSpotify } from "react-icons/fa"
 import {
   PlaylistsInfoContainer,
@@ -11,13 +12,14 @@ import {
 } from "./PlaylistsInfo.styles"
 
 const PlaylistsInfo = ({ img, title, description, reverse, href }) => {
+  const image = getImage(img)
   return (
     <PlaylistsInfoContainer
       $reverse={reverse}
       //data-aos="fade-up"
     >
       <ImageWrapper data-aos={`fade-${reverse ? "left" : "right"}`}>
-        <Image fadeIn={false} fluid={img.childImageSharp.fluid} alt={title} />
+        <Image image={image} alt={title} />
       </ImageWrapper>
       <TextWrapper $reverse={reverse} data-aos="fade-up">
         <PlaylistH2>{title}</PlaylistH2>

@@ -23,9 +23,7 @@ const Playlists = () => {
             description
             img {
               childImageSharp {
-                fluid {
-                  ...GatsbyImageSharpFluid_noBase64
-                }
+                gatsbyImageData
               }
             }
           }
