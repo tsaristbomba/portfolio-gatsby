@@ -58,6 +58,7 @@ const Box = ({ imgSrc, title, stack, githubLink, link, description }) => {
           <Image
             loading="eager"
             fluid={imgSrc.childImageSharp.fluid}
+            fadeIn={false}
             alt={title}
           />
         </BoxImage>
