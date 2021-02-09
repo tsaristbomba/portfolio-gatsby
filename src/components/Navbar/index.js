@@ -27,7 +27,7 @@ const Navbar = ({ handleMenu }) => {
         <NavMenu>
           <NavItem>
             <NavLink
-              to="/work"
+              to="/work/"
               activeStyle={{
                 color: quaternary,
                 textShadow: `${quinary} 0px 4px 18px, ${quinary} 0px 2px 10px`,
@@ -38,7 +38,7 @@ const Navbar = ({ handleMenu }) => {
           </NavItem>
           <NavItem>
             <NavLink
-              to="/about"
+              to="/about/"
               activeStyle={{
                 color: quaternary,
                 textShadow: `${quinary} 0px 4px 18px, ${quinary} 0px 2px 10px`,
@@ -60,7 +60,7 @@ const Navbar = ({ handleMenu }) => {
           </NavItem> */}
           <NavItem>
             <NavLink
-              to="/blog"
+              to="/blog/"
               activeStyle={{
                 color: quaternary,
                 textShadow: `${quinary} 0px 4px 18px, ${quinary} 0px 2px 10px`,
@@ -71,7 +71,7 @@ const Navbar = ({ handleMenu }) => {
           </NavItem>
           <NavItem>
             <NavLink
-              to="/playlists"
+              to="/playlists/"
               activeStyle={{
                 color: quaternary,
                 textShadow: `${quinary} 0px 4px 18px, ${quinary} 0px 2px 10px`,

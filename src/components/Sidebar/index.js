@@ -15,19 +15,19 @@ const Sidebar = ({ handleMenu, isOpen }) => {
         <CloseIcon />
       </IconWrapper>
       <SidebarMenu>
-        <SidebarHashLink onClick={handleMenu} to="/work#">
+        <SidebarHashLink onClick={handleMenu} to="/work/">
           Work
         </SidebarHashLink>
-        <SidebarHashLink onClick={handleMenu} to="/about#">
+        <SidebarHashLink onClick={handleMenu} to="/about/">
           About
         </SidebarHashLink>
         {/* <SidebarHashLink onClick={handleMenu} to="/contact#">
           Contact
         </SidebarHashLink> */}
-        <SidebarHashLink onClick={handleMenu} to="/blog#">
+        <SidebarHashLink onClick={handleMenu} to="/blog/">
           Blog
         </SidebarHashLink>
-        <SidebarHashLink onClick={handleMenu} to="/playlists#">
+        <SidebarHashLink onClick={handleMenu} to="/playlists/">
           Playlists
         </SidebarHashLink>
       </SidebarMenu>
