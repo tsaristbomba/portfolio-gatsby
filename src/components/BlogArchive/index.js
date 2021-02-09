@@ -73,7 +73,7 @@ const BlogArchive = () => {
                 <Column1>
                   <PostLink to={`/blog/${item.node.slug}`}>
                     <PostHero
-                      loading="lazy"
+                      loading="eager"
                       fluid={item.node.heroImage.fluid}
                       alt={item.node.title}
                     />
