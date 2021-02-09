@@ -108,10 +108,13 @@ module.exports = {
       options: {
         name: `Andrei T. Ferreira`,
         short_name: `telfer`,
+        background_color: "#2d2d2d",
+        theme_color: "rgb(255, 24, 76)",
         start_url: `/`,
         display: `standalone`,
         icon: `src/images/icon.jpg`, // This path is relative to the root of the site.
       },
     },
+    `gatsby-plugin-offline`,
   ],
 }
